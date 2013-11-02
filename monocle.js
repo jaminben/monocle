@@ -1,7 +1,7 @@
 var path        = require('path');
 var fs          = require('fs');
 var readdirp    = require('readdirp');
-var use_fs_watch  = process.platform === 'win32' || process.env.USE_FS_WATCH;
+var use_fs_watch  = process.platform === 'win32' || process.env.USE_FS_WATCH != 'false';
 
 module.exports = function() {
   var watched_files       = {};
